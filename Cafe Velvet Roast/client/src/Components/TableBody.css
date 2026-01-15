@@ -1,0 +1,19 @@
+
+.justarandomclassname button{
+    cursor : pointer;
+    display : flex;
+    justify-content : center;
+    align-items : center;
+    background-color : white;
+    border : none;
+}
+
+.justarandomclassname td {
+  background-color : white;
+}
+
+.justarandomclassname button:hover {
+    border : 1px solid red;
+    background-color : red;
+    transition : border 0.5s ease, background-color 0.5s ease;
+}

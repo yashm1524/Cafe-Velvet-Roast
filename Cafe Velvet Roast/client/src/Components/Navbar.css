@@ -1,0 +1,231 @@
+/* .navbar{
+    display : flex;
+    justify-content : space-around;
+    align-items : center;
+    padding : 10px;
+    height : 3em;
+    text-decoration : none;
+    position : fixed;
+    top : 0;
+    z-index : 1000;
+}
+
+.navbar h1 {
+    font-size : 30px;
+    color : black;
+}
+
+p {
+    display : inline;
+    margin : 0px 5px;
+    color : black;
+    cursor : pointer;
+    transition : all 0.3s ease;
+}
+
+a:hover {
+    color: rgba(0,0,0,0.5); 
+}
+
+a {
+    text-decoration : none;
+    color : black;
+} */
+
+.loginreg {
+  display : flex;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-family : "Cabin", sans-serif;
+    font-weight : 700;
+    padding: 10px;
+    height: 3em;
+    background-color: #B49C89;
+    text-decoration: none;
+    position: fixed;
+    top: 0;
+    color : #2C2C2C;
+    left : 0;
+    width: 100%; /* Ensure the navbar spans the full width */
+    z-index: 1000;
+    box-shadow: 0 10px 5px rgba(0, 0, 0, 0.1); /* Optional: Add shadow for better visibility */
+}
+
+.navbar h1 {
+    /* font-size: 30px; */
+    margin: 0; /* Prevent extra margin that might affect alignment */
+}
+
+.navbar a {
+    text-decoration: none;
+    margin: 0 10px; /* Space between links */
+    transition: color 0.3s ease; /* Smooth transition on hover */
+    font-size: 16px; /* Adjust font size */
+    color: #1E1E1E;
+}
+
+.navbar a:visited {
+  color: #1E1E1E; /* match the default to prevent purple */
+}
+
+.navbar a:hover {
+    color: rgba(0, 0, 0, 0.5); /* Change color on hover */
+}
+
+.logoutbutton {
+    height : 40px;
+    width : 70px;
+    background-color : #04AA6D;
+    color : white;
+    font-size : 1em;
+    font-family : "Oswald",sans-serif;
+    border-radius : 10px;
+}
+
+.logoutbutton:hover {
+    background-color : white;
+    cursor : pointer;
+    transition: all 0.3s ease;
+    color : black;
+
+}
+
+.dropdown {
+    position : relative;
+    display : inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%; /* drops directly below the user email */
+    left: 0;
+    background-color: #ffffff;
+    min-width: 160px; /* minimum size */
+    padding: 8px 0;
+    border-radius: 8px;
+    box-shadow: 0px 8px 16px rgba(0,0,0,0.15);
+    z-index: 10;
+
+
+    /* Smooth transition */
+    opacity: 0;
+    transform: translateY(10px);
+    transition: all 0.2s ease-in-out;
+}
+
+.dropdown-content {
+  font-size: 0.7rem !important;
+}
+
+
+.flex {
+    display: flex;
+    flex-direction: column;
+}
+
+.dropdown-content p {
+    margin: 0;
+    padding: 8px 16px;
+    color: #2C2C2C;
+    transition: background-color 0.2s ease;
+}
+
+.dropdown-content p:hover {
+    background-color: #f1f1f1;
+    cursor: pointer;
+    border-radius: 6px;
+}
+
+/* Show dropdown on hover */
+.dropdown:hover .dropdown-content {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.menu-toggle {
+    display: none;
+    font-size: 2rem;
+    background: none;
+    border: none;
+    color: #2C2C2C;
+    cursor: pointer;
+    padding-right : 40px;
+    margin-left : auto;
+}
+
+.idkyaar {
+  display : flex;
+  align-items : center;
+  justify-content : space-between;
+}
+
+.font-size {
+  font-size : 1.7rem !important;
+}
+
+.main-links {
+  display : flex;
+  align-items : center;
+  justify-content : space-between;
+  width : 25%;
+}
+
+.dropdown-content p a {
+  font-size : 0.8rem !important;
+}
+
+/* Mobile layout */
+@media screen and (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    height: auto;
+    padding: 10px 20px;
+  }
+
+  .idkyaar {
+    width : 100%;
+  }
+
+  .menu-toggle {
+    display: block;
+    align-self: flex-end;
+  }
+
+  .main-links {
+    flex-flow : column;
+  }
+
+  /* Hide nav links initially */
+  .navbar p {
+    display: none;
+    width: 100%;
+    margin: 10px 0;
+  }
+
+  /* Show links only if navbar has .responsive class */
+  .navbar.responsive p {
+    display: block;
+  }
+
+  .logoutbutton {
+    width: 10%;
+    margin-top: 10px;
+  }
+
+  .dropdown-content {
+    position: static;
+    width: 100%;
+    box-shadow: none;
+  }
+
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+}

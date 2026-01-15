@@ -1,0 +1,177 @@
+.menuCardWrap {
+  display: flex;
+  flex-direction: row;
+  width: 420px;           /* Wider card */
+  border-radius: 20px;
+  background: #fff;
+  color: #333;
+  font-family: "Cabin", sans-serif;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin: 15px auto;
+}
+
+.menuCardWrap:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.menuCardImage {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;  /* Circle image */
+  overflow: hidden;
+  flex-shrink: 0;
+  margin: 15px;
+  border: 3px solid #04AA6D;
+}
+
+.menuCardImage img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.menuCardDetails {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 15px 20px;
+  flex: 1;
+}
+
+.menuCardName {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #222;
+}
+
+.menuCardDescription {
+  font-size: 0.9rem;
+  color: #666;
+  margin: 5px 0;
+  line-height: 1.3;
+}
+
+.menuCardPrice {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #04AA6D;
+  margin: 5px 0;
+}
+
+.menuCardOrderButton {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 8px;
+}
+
+.menuCardOrderButton p {
+  font-size: 1rem;
+  font-weight: 500;
+  width: 28px;
+  text-align: center;
+}
+
+.menuCardOrderButton button {
+  background-color: #04AA6D;
+  color: white;
+  height: 32px;
+  width: 32px;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: transform 0.2s ease, background-color 0.3s ease;
+}
+
+.menuCardOrderButton button:hover {
+  background-color: #028a57;
+  transform: scale(1.1);
+}
+
+/* Responsiveness */
+@media screen and (max-width: 1024px) {
+  .menuCardWrap {
+    width: 90%;
+  }
+  .menuCardImage {
+    width: 100px;
+    height: 100px;
+  }
+  .menuCardName {
+    font-size: 1.2rem;
+  }
+  .menuCardDescription {
+    font-size: 0.85rem;
+  }
+  .menuCardPrice {
+    font-size: 1rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .menuCardWrap {
+    width: 95%;
+  }
+  .menuCardImage {
+    width: 90px;
+    height: 90px;
+  }
+  .menuCardName {
+    font-size: 1.1rem;
+  }
+  .menuCardDescription {
+    font-size: 0.8rem;
+  }
+  .menuCardPrice {
+    font-size: 0.95rem;
+  }
+  .menuCardOrderButton button {
+    height: 28px;
+    width: 28px;
+    font-size: 0.85rem;
+  }
+  .menuCardOrderButton p {
+    font-size: 0.9rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .menuCardWrap {
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 15px;
+  }
+  .menuCardImage {
+    width: 100px;
+    height: 100px;
+    margin: 15px 0 5px 0;
+  }
+  .menuCardDetails {
+    align-items: center;
+    text-align: center;
+  }
+  .menuCardName {
+    font-size: 1rem;
+  }
+  .menuCardDescription {
+    font-size: 0.75rem;
+  }
+  .menuCardPrice {
+    font-size: 0.9rem;
+  }
+  .menuCardOrderButton {
+    justify-content: center;
+  }
+  .menuCardOrderButton button {
+    height: 26px;
+    width: 26px;
+    font-size: 0.8rem;
+  }
+  .menuCardOrderButton p {
+    font-size: 0.85rem;
+  }
+}
